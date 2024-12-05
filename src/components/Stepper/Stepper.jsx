@@ -123,29 +123,29 @@ function Stepper({ product }) {
         </ol>
       </div>
       <div
-        className={`${fontClass} grid grid-cols-4 px-5 pb-5 gap-4`}
+        className={`${fontClass} grid grid-cols-4 px-5 pb-5 gap-2`}
       >
         <div>
-          <h1 className="text-[#2b2f3a] font-bold text-sm md:text-md lg:text-lg">
+          <h1 className="text-[#2b2f3a] font-bold text-[8px] md:text-md lg:text-lg">
             {t("TICKET CREATED")}
           </h1>
         </div>
         <div className="ps-5">
-          <h1 className="text-[#2b2f3a] font-bold text-sm md:text-md lg:text-lg">
+          <h1 className="text-[#2b2f3a] font-bold text-[8px] md:text-md lg:text-lg">
             {t("PACKAGE RECEIVED")}
           </h1>
         </div>
         <div
           className={`${
             currentLang ? "text-center" : "text-right"
-          } text-sm md:text-md lg:text-lg`}
+          } text-[8px] md:text-md lg:text-lg`}
         >
           <h1 className="text-[#2b2f3a] font-bold">{t("OUT FOR DELIVERY")}</h1>
         </div>
         <div
           className={`${
             currentLang ? "text-left" : "text-right"
-          } text-sm md:text-md lg:text-lg`}
+          } text-[8px] md:text-md lg:text-lg`}
         >
           <h1 className="text-[#2b2f3a] font-bold">{t("DELIVERED")}</h1>
         </div>
