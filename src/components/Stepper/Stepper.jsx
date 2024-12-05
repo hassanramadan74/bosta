@@ -4,9 +4,8 @@ function Stepper({ product }) {
   const fontClass = i18next.language === "ar" ? "font-cairo" : "font-primary";
   const currentLang = i18next.language === "ar" ? true : false;
   const direction = i18next.language === "ar" ? "rtl" : "ltr";
-  const flipIconClass = i18next.language === "ar" ? "transform scale-x-[-1]" : "";
-
-  
+  const flipIconClass =
+    i18next.language === "ar" ? "transform scale-x-[-1]" : "";
 
   if (product) {
     console.log("here is the product");
@@ -15,7 +14,10 @@ function Stepper({ product }) {
   }
   return (
     <>
-      <div className={`${fontClass} p-5 flex items-center justify-center`} dir={direction}> 
+      <div
+        className={`${fontClass} p-5 flex items-center justify-center`}
+        dir={direction}
+      >
         <ol className="flex items-center w-full justify-center">
           <li
             className={`flex w-full items-center text-white after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block ${
@@ -89,9 +91,9 @@ function Stepper({ product }) {
               {product?.CurrentStatus?.state === "DELIVERED" ? (
                 <i className="fa-solid fa-check"></i>
               ) : (
-
-               <i className={`fa-solid fa-truck md:text-base text-sm transform ${flipIconClass}`} />
-
+                <i
+                  className={`fa-solid fa-truck md:text-base text-sm transform ${flipIconClass}`}
+                />
               )}
             </span>
           </li>
@@ -120,26 +122,32 @@ function Stepper({ product }) {
           </li>
         </ol>
       </div>
-      <div className={`${fontClass} grid grid-cols-4 px-5 pb-5`}>
+      <div
+        className={`${fontClass} grid grid-cols-4 px-5 pb-5 gap-4`}
+      >
         <div>
-          <h1 className="text-[#2b2f3a] font-bold text-[16px]">
+          <h1 className="text-[#2b2f3a] font-bold text-sm md:text-md lg:text-lg">
             {t("TICKET CREATED")}
           </h1>
         </div>
         <div className="ps-5">
-          <h1 className="text-[#2b2f3a] font-bold text-[16px]">
+          <h1 className="text-[#2b2f3a] font-bold text-sm md:text-md lg:text-lg">
             {t("PACKAGE RECEIVED")}
           </h1>
         </div>
-        <div className={`${currentLang?"text-center": "text-right"}`}>
-          <h1 className="text-[#2b2f3a] font-bold text-[16px]">
-            {t("OUT FOR DELIVERY")}
-          </h1>
+        <div
+          className={`${
+            currentLang ? "text-center" : "text-right"
+          } text-sm md:text-md lg:text-lg`}
+        >
+          <h1 className="text-[#2b2f3a] font-bold">{t("OUT FOR DELIVERY")}</h1>
         </div>
-        <div className={`${currentLang?"text-left": "text-right"}`}>
-          <h1 className="text-[#2b2f3a] font-bold text-[16px]">
-            {t("DELIVERED")}
-          </h1>
+        <div
+          className={`${
+            currentLang ? "text-left" : "text-right"
+          } text-sm md:text-md lg:text-lg`}
+        >
+          <h1 className="text-[#2b2f3a] font-bold">{t("DELIVERED")}</h1>
         </div>
       </div>
     </>
